@@ -47,6 +47,8 @@ https://www.elastic.co/kibana
 ### Quick UserGuide
 
 ```bash
+##--Terrafrom
+
 #00.1 :: Select "terraform" directory
 $ cd terraform
 
@@ -69,6 +71,8 @@ https://srv2.dotspace.ru    ## Welcome to [srv2.dotspace.ru] (Monitor: Elasticse
 #00.5 :: Destroy cloud resources if they are not needed
 $ terraform destroy -auto-approve
 
+
+##--RSyslog
 
 #01.1 :: Check [srv1] example shell-script for cron job
 $ /home/ubuntu/scripts/apps/get_hostinfo.sh
@@ -131,7 +135,7 @@ $ sudo tail -f /var/log/remote/srv1/20231120/nginx.log
 ### Changelog
 
 ```bash
-2023.11.20 :: Настроено логирование на оснве RSyslog :: хост "srv1" передает логи (audit.log, cron.log, nginx.log) на хост "srv2":
+2023.11.20 :: Настроено логирование на оснве RSyslog :: хост "srv1" передает логи (audit.log, cron.log, nginx.log) на хост "srv2"
 2023.11.07 :: Разработана каркасная базовая Terraform конфигурация создающая два хоста "srv1", "srv2" на основе образа Ubuntu 22.04
 
 ```

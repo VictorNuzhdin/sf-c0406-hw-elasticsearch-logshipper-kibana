@@ -78,7 +78,7 @@ $ terraform destroy -auto-approve
 $ /home/ubuntu/scripts/apps/get_hostinfo.sh
 $ cat /home/ubuntu/scripts/apps/get_hostinfo.log
 
-        { "ram_mb_totl": 1963, "ram_mb_used": 872, "ram_mb_free": 1091, "dsk_mb_totl": 7975, "dsk_mb_used": 4138, "dsk_mb_usep": 55, "dsk_mb_free": 3443 }
+        {"ram_mb_totl":1963,"ram_mb_used":1282,"ram_mb_usep":65.3082,"ram_mb_free":680,"dsk_mb_totl":7975,"dsk_mb_used":4482,"dsk_mb_usep":60,"dsk_mb_free":3099}
 
 #01.2 :: Check [srv1] cron job that runs the example shell-script every 1 hour
 $ sudo crontab -l
@@ -128,6 +128,13 @@ $ sudo tail -f /var/log/remote/srv1/20231120/nginx.log
         Nov 20 06:27:22 srv1 nginx_srv1: 92.124.136.25 - - [20/Nov/2023:06:27:22 +0000] "GET / HTTP/1.1" 200 902 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
         Nov 20 06:50:17 srv1 nginx_srv1: 92.124.136.25 - - [20/Nov/2023:06:50:17 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
         Nov 20 06:54:44 srv1 nginx_srv1: 92.124.136.25 - - [20/Nov/2023:06:54:44 +0000] "GET / HTTP/1.1" 304 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36"
+
+$ sudo tail -f /root/get_hostinfo.log
+
+        2023-11-20T06:20:01    {"ram_mb_totl":1963,"ram_mb_used":1282,"ram_mb_usep":65.3082,"ram_mb_free":680,"dsk_mb_totl":7975,"dsk_mb_used":4482,"dsk_mb_usep":60,"dsk_mb_free":3099}
+        2023-11-20T06:25:01    {"ram_mb_totl":1963,"ram_mb_used":1272,"ram_mb_usep":64.7988,"ram_mb_free":690,"dsk_mb_totl":7975,"dsk_mb_used":4482,"dsk_mb_usep":60,"dsk_mb_free":3099}
+        2023-11-20T06:30:01    {"ram_mb_totl":1963,"ram_mb_used":1278,"ram_mb_usep":65.1044,"ram_mb_free":685,"dsk_mb_totl":7975,"dsk_mb_used":4490,"dsk_mb_usep":60,"dsk_mb_free":3091}
+        2023-11-20T06:35:01    {"ram_mb_totl":1963,"ram_mb_used":1278,"ram_mb_usep":65.1044,"ram_mb_free":685,"dsk_mb_totl":7975,"dsk_mb_used":4490,"dsk_mb_usep":60,"dsk_mb_free":3091}
 
 ```
 <br>

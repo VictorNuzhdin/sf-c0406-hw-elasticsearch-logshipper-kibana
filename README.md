@@ -75,6 +75,7 @@ $ terraform destroy -auto-approve
 ##--RSyslog
 
 #01.1 :: Check [srv1] example shell-script for cron job
+#        ./terraform/scripts/srv1/configs/step04_rsyslogClient/get_hostinfo.sh
 $ /home/ubuntu/scripts/apps/get_hostinfo.sh
 $ cat /home/ubuntu/scripts/apps/get_hostinfo.log
 
@@ -87,14 +88,14 @@ $ sudo crontab -l
         0 */1 * * *    /home/ubuntu/scripts/apps/get_hostinfo.sh 2>&1
 
 #01.3 :: Check [srv1] RSyslog Client config
-#      ./terraform/scripts/srv2/configs/step04_rsyslogServer
+#        ./terraform/scripts/srv1/configs/step04_rsyslogClient/
 $ ls -1X /etc/rsyslog.d/
 
         10-custom-c0406.conf
         ..
 
 #01.4 :: Check [srv2] RSyslog Server config
-#      ./terraform/scripts/srv2/configs/step04_rsyslogServer
+#        ./terraform/scripts/srv2/configs/step04_rsyslogServer/
 $ sudo ls -1X /etc/rsyslog.d/
 
         10-custom-c0406-audit.conf

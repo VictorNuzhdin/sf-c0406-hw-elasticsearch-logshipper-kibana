@@ -34,7 +34,7 @@ locals {
   vm2_name         = "srv2"
   vm2_hostname     = "srv2"
   vm2_ipv4_local   = "10.0.10.14"
-  vm2_disk0size    = 8
+  vm2_disk0size    = 16    # 8 GiB disk size is not enought
 }
 
 ##--Connects to Cloud with Cloud ids
@@ -160,7 +160,7 @@ resource "yandex_compute_instance" "srv2" {
   resources {
     cores         = 2
     core_fraction = 5
-    memory        = 2
+    memory        = 3    # 2 GiB memory is not enought
   }
 
   scheduling_policy {

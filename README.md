@@ -143,7 +143,7 @@ $ sudo tail -f /root/get_hostinfo.log
 ### Changelog
 
 ```bash
-2023.11.20 :: Настроено логирование на оснве RSyslog :: хост "srv1" передает логи (audit.log, cron.log, nginx.log) на хост "srv2"
+2023.11.20 :: Реализовано логирование на основе RSyslog :: хост "srv1" передает логи (audit.log, cron.log, nginx.log) на хост "srv2"
 2023.11.07 :: Разработана каркасная базовая Terraform конфигурация создающая два хоста "srv1", "srv2" на основе образа Ubuntu 22.04
 
 ```
